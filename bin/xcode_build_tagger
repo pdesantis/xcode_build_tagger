@@ -1,0 +1,11 @@
+#!/user/bin/env ruby
+
+require 'xcode_build_tagger'
+
+label = ARGV[0]
+
+if label
+	XcodeBuildTagger.bump_version_and_set_tag label
+else
+  puts "need a label lol"
+end
